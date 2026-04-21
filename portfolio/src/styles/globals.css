@@ -1,0 +1,40 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  color-scheme: light;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  font-family: "Manrope", sans-serif;
+  background-color: #f6f4ef;
+  color: #1b1b1b;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+img {
+  display: block;
+}
+
+.paper-texture {
+  background-image:
+    radial-gradient(rgba(0, 0, 0, 0.04) 0.5px, transparent 0.5px),
+    radial-gradient(rgba(0, 0, 0, 0.03) 0.5px, transparent 0.5px);
+  background-size: 26px 26px, 32px 32px;
+  background-position: 0 0, 10px 12px;
+}
+
+.paper-shadow {
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.12);
+}
+
+.soft-card-shadow {
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.08);
+}
