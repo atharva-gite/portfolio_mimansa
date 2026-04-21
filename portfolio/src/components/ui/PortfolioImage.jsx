@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 
 const logged = new Set();
 
-export default function PortfolioImage({ src, alt, label, className = "" }) {
+export default function PortfolioImage({ src, alt, label, className = "", ...rest }) {
   const [failed, setFailed] = useState(!src);
 
   useEffect(() => {
@@ -39,6 +39,7 @@ export default function PortfolioImage({ src, alt, label, className = "" }) {
       alt={alt}
       className={className}
       onError={() => setFailed(true)}
+      {...rest}
     />
   );
 }

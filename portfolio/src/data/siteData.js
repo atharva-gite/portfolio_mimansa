@@ -1,5 +1,22 @@
 import { assets } from "./assets";
 
+export const slides = {
+  sectionId: "slides",
+  index: "00",
+  label: "Slides",
+  title: "ANOKHA",
+  subtitle: "Slide Deck (PDF)",
+  pdfSrc: assets.slides.anokhaPdf,
+  // Map Selected Works items to slide pages (1-based). Adjust once you know the real structure.
+  nav: {
+    "01": 1,
+    "02": 6,
+    "03": 12,
+    "04": 18,
+    "05": 24,
+  },
+};
+
 export const cover = {
   sectionId: "cover",
   index: "01",
@@ -137,30 +154,37 @@ export const works = {
       title: "Project Vesper",
       meta: "Consumer Object · 2025",
       image: assets.works.project01,
+      pdfPreviewSrc: slides.pdfSrc,
+      slidesPage: slides.nav["01"],
     },
     {
       id: "02",
-      title: "Lightweight Task Chair",
-      meta: "Furniture · 2024",
+      title: "Rasa Katha",
+      meta: "The Compendium · PDF",
       image: assets.works.project02,
+      pdfPreviewSrc: assets.slides.rasaKathaPdf,
+      slidesPage: 1,
     },
     {
       id: "03",
-      title: "Wearable Ritual Device",
-      meta: "Concept · 2024",
+      title: "CAS Zine",
+      meta: "Magazine · Page Flip",
       image: assets.works.project03,
+      zinePages: assets.zines.cas.pages,
     },
     {
       id: "04",
       title: "Kitchen Companion",
       meta: "Appliance · 2023",
       image: assets.works.project04,
+      slidesPage: slides.nav["04"],
     },
     {
       id: "05",
       title: "Material Study: Stone",
       meta: "CMF · 2023",
       image: assets.works.project05,
+      slidesPage: slides.nav["05"],
     },
   ],
 };

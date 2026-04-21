@@ -1,4 +1,30 @@
 export const assets = {
+  slides: {
+    anokhaPdf: "/assets/slides/anokha-slides.pdf",
+    rasaKathaPdf: "/assets/slides/rasa-katha-compendium.pdf",
+  },
+  zines: {
+    cas: {
+      coverFront: "/assets/zines/cas/cover-front.jpg",
+      coverFrontAlt: "/assets/zines/cas/cover-front-alt.jpg",
+      coverBack: "/assets/zines/cas/cover-back.jpg",
+      pages: [
+        "/assets/zines/cas/cover-front.jpg",
+        "/assets/zines/cas/page-01.jpg",
+        "/assets/zines/cas/page-02.jpg",
+        "/assets/zines/cas/page-03.jpg",
+        "/assets/zines/cas/page-04.jpg",
+        "/assets/zines/cas/page-05.jpg",
+        "/assets/zines/cas/page-06.jpg",
+        "/assets/zines/cas/page-07.jpg",
+        "/assets/zines/cas/page-08.jpg",
+        "/assets/zines/cas/page-09-01.jpg",
+        "/assets/zines/cas/page-09-02.jpg",
+        "/assets/zines/cas/page-09-03.jpg",
+        "/assets/zines/cas/cover-back.jpg",
+      ],
+    },
+  },
   cover: {
     boardBg: "/assets/cover/board-bg.jpg",
     paperCard: "/assets/cover/paper-card.png",
@@ -34,6 +60,12 @@ export const assets = {
 };
 
 export const assetsChecklist = [
+  assets.slides.anokhaPdf,
+  assets.slides.rasaKathaPdf,
+  assets.zines.cas.coverFront,
+  assets.zines.cas.coverFrontAlt,
+  assets.zines.cas.coverBack,
+  ...assets.zines.cas.pages,
   assets.cover.boardBg,
   assets.cover.paperCard,
   assets.cover.object01,

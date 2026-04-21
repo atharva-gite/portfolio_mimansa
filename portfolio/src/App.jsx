@@ -1,13 +1,10 @@
 import React, { useEffect } from "react";
+import { Navigate, Route, Routes } from "react-router-dom";
 import PageWrapper from "./components/layout/PageWrapper";
-import SmoothScroll from "./components/layout/SmoothScroll";
-import Hero from "./components/sections/Hero";
-import About from "./components/sections/About";
-import Experience from "./components/sections/Experience";
-import Education from "./components/sections/Education";
-import SelectedWorks from "./components/sections/SelectedWorks";
+import ScrollToTop from "./components/layout/ScrollToTop";
 import { assetsChecklist } from "./data/assets";
-import { cover, about, experience, education, works } from "./data/siteData";
+import Home from "./pages/Home";
+import Work from "./pages/Work";
 
 export default function App() {
   useEffect(() => {
@@ -18,13 +15,12 @@ export default function App() {
 
   return (
     <PageWrapper>
-      <SmoothScroll>
-        <Hero data={cover} />
-        <About data={about} />
-        <Experience data={experience} />
-        <Education data={education} />
-        <SelectedWorks data={works} />
-      </SmoothScroll>
+      <ScrollToTop />
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/work/:id" element={<Work />} />
+        <Route path="*" element={<Navigate to="/" replace />} />
+      </Routes>
     </PageWrapper>
   );
 }

@@ -12,8 +12,10 @@
     "framer-motion": "^11.3.8",
     "lenis": "^1.1.13",
     "lucide-react": "^0.462.0",
+    "pdfjs-dist": "^4.10.38",
     "react": "^18.3.1",
-    "react-dom": "^18.3.1"
+    "react-dom": "^18.3.1",
+    "react-router-dom": "^6.26.2"
   },
   "devDependencies": {
     "@tailwindcss/forms": "^0.5.7",

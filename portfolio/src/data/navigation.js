@@ -1,4 +1,5 @@
 export const navSections = [
+  { id: "slides", label: "Slides", index: "00" },
   { id: "hero", label: "Cover", index: "01" },
   { id: "statement", label: "Statement", index: "02" },
   { id: "about", label: "About", index: "03" },
