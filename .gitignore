@@ -1,0 +1,7 @@
+.DS_Store
+
+# Build artifacts
+portfolio/dist/
+
+# Dependencies
+portfolio/node_modules/
